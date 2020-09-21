@@ -1,10 +1,32 @@
 <template>
   <div id="app">
+    <vue-particles
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="80"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+      style="position: fixed; height: 100vh; width: 100%; z-index: -1"
+    >
+    </vue-particles>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Sobre mí</router-link> |
+      <router-link to="/work">Proyectos</router-link> |
+      <router-link to="/contact">Contacto</router-link>
     </div>
-    <router-view/>
+    <vue-page-transition name="fade-in-down">
+      <router-view />
+    </vue-page-transition>
   </div>
 </template>
 
@@ -15,6 +37,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  width: 100vw;
 }
 
 #nav {
