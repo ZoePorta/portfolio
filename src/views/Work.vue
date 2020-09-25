@@ -1,16 +1,18 @@
 <template>
   <div class="works">
+    <h1>Algunas de las cosillas que he hecho...</h1>
+    <p>Haz click en las imágenes para más información</p>
     <article v-for="work in works" :key="work.id" class="work">
       <h1>{{ work.title }}</h1>
       <flipper
         class="card"
         width="21rem"
-        height="22.5rem"
+        height="22.9rem"
         :flipped="work.flipped"
         @click="work.flipped = !work.flipped"
       >
         <div class="cardside front" slot="front">
-          <img src="../assets/crafty_phone.jpg" alt="" />
+          <img :src="getImage(work.image)" alt="" />
         </div>
 
         <div class="cardside back" slot="back" v-html="work.desc">
@@ -21,7 +23,10 @@
         <a :href="work.github"
           ><font-awesome-icon :icon="['fab', 'github-alt']"
         /></a>
-        <a :href="work.link"><font-awesome-icon icon="eye"/></a>
+        <a :href="work.link" v-if="work.link"
+          ><font-awesome-icon icon="eye"
+        /></a>
+        <span v-else><font-awesome-icon icon="eye-slash"/></span>
       </nav>
     </article>
   </div>
@@ -29,7 +34,6 @@
 
 <script>
 import Flipper from "vue-flipper";
-import card from "@/components/Card.vue";
 
 export default {
   name: "Work",
@@ -39,38 +43,37 @@ export default {
       works: [
         {
           title: "Crafty",
-          image: "../assets/crafty_phone.jpg",
+          image: "crafty_phone.jpg",
           desc: `Marketplace de productos artesanales. <br><br> Cuenta con buscador para filtrar por palabras clave y/o distintos parámetros simultánamente. 
           El back está hecho con Node.js y el front con Vue.js.`,
-          github: "http://github.com",
-          link: "google.com",
+          github: "https://github.com/ZoePorta/Proyecto",
           flipped: false,
         },
         {
-          title: "Crafty",
-          image: "../assets/crafty_phone.jpg",
+          title: "Hack A Music",
+          image: "music.jpg",
           desc: `Marketplace de productos artesanales. <br><br> Cuenta con buscador para filtrar por palabras clave y/o distintos parámetros simultánamente. 
           El back está hecho con Node.js y el front con Vue.js.`,
-          github: "http://github.com",
-          link: "google.com",
+          github: "https://github.com/ZoePorta/hackamusic",
+          link: "https://zoe-hackamusic.netlify.app",
           flipped: false,
         },
         {
-          title: "Crafty",
-          image: "../assets/crafty_phone.jpg",
+          title: "Rick & Morty",
+          image: "rickmorty.jpg",
           desc: `Marketplace de productos artesanales. <br><br> Cuenta con buscador para filtrar por palabras clave y/o distintos parámetros simultánamente. 
           El back está hecho con Node.js y el front con Vue.js.`,
-          github: "http://github.com",
-          link: "google.com",
+          github: "https://github.com/ZoePorta/rick-morty-api",
+          link: "https://searchchar-rickandmorty.netlify.app",
           flipped: false,
         },
         {
-          title: "Crafty",
-          image: "../assets/crafty_phone.jpg",
+          title: "Juego",
+          image: "vuester.jpg",
           desc: `Marketplace de productos artesanales. <br><br> Cuenta con buscador para filtrar por palabras clave y/o distintos parámetros simultánamente. 
           El back está hecho con Node.js y el front con Vue.js.`,
-          github: "http://github.com",
-          link: "google.com",
+          github: "https://github.com/ZoePorta/vuester-code",
+          link: "https://zoe-vuesterslayer.netlify.app",
           flipped: false,
         },
       ],
@@ -80,6 +83,9 @@ export default {
     onClick() {
       this.flipped = !this.flipped;
     },
+    getImage(img) {
+      return require("../assets/" + img);
+    },
   },
 };
 </script>
@@ -88,22 +94,21 @@ export default {
 <style scoped>
 .work {
   width: fit-content;
+  display: inline-block;
 }
-.card {
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 0 5px blue;
-  background: blue;
-}
+
 .cardside {
+  box-shadow: 2px 2px 5px rgba(142, 142, 226, 0.507);
   height: 100%;
   width: 100%;
-  overflow: hidden;
+
   border-radius: 1rem;
+
+  pointer-events: auto;
 }
 
 .back {
-  background: hotpink;
+  background: lavender;
 }
 
 .cardside img {
@@ -111,7 +116,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
   z-index: -1;
+  border-radius: 1rem;
 }
 </style>
