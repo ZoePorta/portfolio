@@ -1,12 +1,13 @@
 <template>
-  <div id="app">
+  <div :class="mode" id="app">
+    <div id="background"></div>
     <vue-particles
-      color="#dedede"
-      :particleOpacity="0.7"
+      :color="particles"
+      :particleOpacity="0.5"
       :particlesNumber="80"
-      shapeType="circle"
+      shapeType="star"
       :particleSize="4"
-      linesColor="#dedede"
+      :linesColor="particles"
       :linesWidth="1"
       :lineLinked="true"
       :lineOpacity="0.4"
@@ -15,14 +16,22 @@
       :hoverEffect="true"
       hoverMode="grab"
       :clickEffect="true"
-      clickMode="push"
-      style="position: fixed; height: 100vh; width: 100%; z-index: -10; pointer-events: auto"
+      clickMode="repulse"
+      style="position: fixed; height: 100vh; width: 100%; z-index: -1; pointer-events: auto"
     >
     </vue-particles>
     <div id="nav">
-      <router-link to="/">Sobre mí</router-link> |
-      <router-link to="/work">Proyectos</router-link> |
-      <router-link to="/contact">Contacto</router-link>
+      <span id="mode">
+        <button @click="mode = 'light'">☀️</button>
+        <button @click="mode = 'dark'">🌙</button>
+      </span>
+      <span id="routerlinks">
+        <router-link to="/">Sobre mí</router-link>
+        |
+        <router-link to="/work">Proyectos</router-link>
+        |
+        <router-link to="/contact">Contacto</router-link>
+      </span>
     </div>
     <vue-page-transition class="container" name="fade-in-down">
       <router-view />
@@ -30,11 +39,41 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      mode: "dark",
+      particles: "#F6C2FF",
+    };
+  },
+};
+</script>
+
 <style>
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.light {
+  --text-color: #000000;
+  --main-bg-color: #e3f6f5;
+  --block-bg-color: #ffffff;
+  --shadow: 2px 2px 5px white;
+  --link-color: #8100fa;
+  --active-link-color: #3f007a;
+}
+
+.dark {
+  --text-color: #c2ffff;
+
+  --main-bg-color: #20181f;
+  --block-bg-color: #272a4b;
+  --shadow: 2px 2px 5px rgb(187, 250, 255);
+  --link-color: #f2b1fd;
+  --active-link-color: #ed85ff;
 }
 
 body {
@@ -46,9 +85,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-color);
   width: 100vw;
   max-width: 100%;
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  background: var(--main-bg-color);
+  z-index: -1;
+  position: fixed;
 }
 
 #nav {
@@ -56,16 +103,24 @@ body {
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: var(--link-color);
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  font-weight: bold;
+  color: var(--active-link-color);
 }
 
-a {
+a,
+button {
+  color: var(--link-color);
   pointer-events: auto;
+  background: none;
+  border: none;
+}
+
+a:visited {
+  color: var(--active-link-color);
 }
 
 /* BARRA SCROLL */

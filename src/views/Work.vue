@@ -35,97 +35,14 @@
 
 <script>
 import Flipper from "vue-flipper";
+import worksjson from "@/assets/works.json";
 
 export default {
   name: "Work",
   components: { Flipper },
   data() {
     return {
-      works: [
-        {
-          title: "Crafty",
-          tech: "Node.js | Vue.js | MySQL",
-          image: "crafty_phone.jpg",
-          desc: `<h3>Marketplace de productos artesanales</h3>
-<p>Registro y login.</p>
-<p>
-  Los usuarios anónimos pueden buscar por palabras clave y/o distintos
-  parámetros simultánamente.
-</p>
-<p>
-  Los usuarios registrados pueden agregar a su lista de deseos,
-  comprar y valorar (puntuación y comentario) los productos.
-</p>
-<p>Los usuarios vendedores pueden agregar productos al catálogo (no implementado en front).</p>
-<br>
-<ul style="list-style: inside; text-align: left;">
-  <li><strong>Backend:</strong> Node.js (API Rest)</li>
-  <li><strong>Frontend:</strong> Vue.js</li>
-  <li><strong>Base de datos:</strong> MySQL</li>
-</ul>`,
-          github: "https://github.com/ZoePorta/Proyecto",
-          flipped: false,
-        },
-        {
-          title: "Hack A Music",
-          tech: "Vue.js | API",
-          image: "music.jpg",
-          desc: `<h3>Ranking musical</h3>
-<p>Ranking de géneros, artistas y temas musicales.</p>
-<p>Utiliza la
-  <a href="https://www.last.fm/api" target="_blank" rel="noopener noreferrer"
-    >API de Last.fm</a
-  >
-  para obtener los datos.</p>
-<p>Al pasar el ratón, por encima muestra los oyentes.</p>
-<p>
-  Al hacer click, muestra una descripción y el enlace a la página correspondiente
-  en Last.fm.
-</p>
-<p>
-  <strong>Nota:</strong> Las imágenes están correctamente configuradas, es
-  Last.fm quien las sustituyó por el icono de la estrella.
-</p>
-`,
-          github: "https://github.com/ZoePorta/hackamusic",
-          link: "https://zoe-hackamusic.netlify.app",
-          flipped: false,
-        },
-        {
-          title: "Rick & Morty",
-          image: "rickmorty.jpg",
-          tech: "Vue.js | API",
-
-          desc: `<h3>Buscador de personajes</h3>
-<p>
-  Coge los datos de la
-  <a
-    href="https://rickandmortyapi.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    >API de Rick y Morty</a
-  >.
-</p>
-<p>Permite buscar por ID o fitrar por varios parámetros.</p>`,
-          github: "https://github.com/ZoePorta/rick-morty-api",
-          link: "https://searchchar-rickandmorty.netlify.app",
-          flipped: false,
-        },
-        {
-          title: "Juego",
-          tech: "Vue.js",
-
-          image: "vuester.jpg",
-          desc: `<h3>Minijuego hecho en Vue</h3>
-<p>En proceso.</p>
-<p>Con comunicación entre componentes.</p>
-<p><strong>Pendiente:</strong> Añadir sprites y editar estilos.</p>
-`,
-          github: "https://github.com/ZoePorta/vuester-code",
-          link: "https://zoe-vuesterslayer.netlify.app",
-          flipped: false,
-        },
-      ],
+      works: worksjson,
     };
   },
   methods: {
@@ -133,7 +50,7 @@ export default {
       this.flipped = !this.flipped;
     },
     getImage(img) {
-      return require("../assets/" + img);
+      return require("../assets/images/" + img);
     },
   },
 };
@@ -147,7 +64,7 @@ export default {
 }
 
 .cardside {
-  box-shadow: 2px 2px 5px rgba(142, 142, 226, 0.507);
+  box-shadow: var(--shadow);
   height: 100%;
   width: 100%;
 
@@ -157,7 +74,7 @@ export default {
 }
 
 .back {
-  background: lavender;
+  background: var(--block-bg-color);
 }
 
 .cardside img {
@@ -165,7 +82,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+
   border-radius: 1rem;
 }
 </style>
