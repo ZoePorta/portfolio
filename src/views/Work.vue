@@ -10,7 +10,8 @@
         width="21rem"
         height="22.9rem"
         :flipped="work.flipped"
-        @click="work.flipped = !work.flipped"
+        @mouseover="work.flipped = true"
+        @mouseleave="work.flipped = false"
       >
         <div class="cardside front" slot="front">
           <img :src="getImage(work.image)" :alt="work.title" />
@@ -22,7 +23,7 @@
       </flipper>
       <nav>
         <a :href="work.github" title="Ver repositorio en GitHub"
-          ><font-awesome-icon :icon="['fab', 'github-alt']"
+          ><font-awesome-icon :icon="['fab', 'github']"
         /></a>
         <a :href="work.link" v-if="work.link" title="Visitar proyecto"
           ><font-awesome-icon icon="eye"
@@ -61,6 +62,7 @@ export default {
 .work {
   width: fit-content;
   display: inline-block;
+  margin: 1rem;
 }
 
 .cardside {
@@ -71,6 +73,8 @@ export default {
   border-radius: 1rem;
 
   pointer-events: auto;
+
+  padding: 1rem;
 }
 
 .back {
@@ -84,5 +88,14 @@ export default {
   width: 100%;
 
   border-radius: 1rem;
+}
+
+nav {
+  margin: 0.7rem;
+}
+
+nav a,
+nav span {
+  margin: 0 0.5rem;
 }
 </style>

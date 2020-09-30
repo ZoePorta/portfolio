@@ -3,14 +3,14 @@
     <div id="background"></div>
     <vue-particles
       :color="particles"
-      :particleOpacity="0.5"
+      :particleOpacity="1"
       :particlesNumber="80"
       shapeType="star"
       :particleSize="4"
       :linesColor="particles"
       :linesWidth="1"
       :lineLinked="true"
-      :lineOpacity="0.4"
+      :lineOpacity="0.85"
       :linesDistance="150"
       :moveSpeed="3"
       :hoverEffect="true"
@@ -22,14 +22,18 @@
     </vue-particles>
     <div id="nav">
       <span id="mode">
-        <button @click="mode = 'light'">☀️</button>
-        <button @click="mode = 'dark'">🌙</button>
+        <button :class="{ big: mode === 'light' }" @click="mode = 'light'">
+          ☀️
+        </button>
+        <button :class="{ big: mode === 'dark' }" @click="mode = 'dark'">
+          🌙
+        </button>
       </span>
       <span id="routerlinks">
         <router-link to="/">Sobre mí</router-link>
-        |
+        ⋆
         <router-link to="/work">Proyectos</router-link>
-        |
+        ⋆
         <router-link to="/contact">Contacto</router-link>
       </span>
     </div>
@@ -51,37 +55,45 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Josefin+Sans&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 12px;
+}
+
+/* Dark/Light mode color variables */
 .light {
-  --text-color: #000000;
-  --main-bg-color: #e3f6f5;
-  --block-bg-color: #ffffff;
-  --shadow: 2px 2px 5px white;
+  --text-color: #272a4b;
+  --main-bg-color: #f8fafa;
+  --block-bg-color: #d7fcff;
+  --shadow: 2px 2px 5px #f6c2ffa8;
   --link-color: #8100fa;
   --active-link-color: #3f007a;
 }
 
 .dark {
-  --text-color: #c2ffff;
+  --text-color: #cbffff;
 
   --main-bg-color: #20181f;
   --block-bg-color: #272a4b;
-  --shadow: 2px 2px 5px rgb(187, 250, 255);
+  --shadow: 2px 2px 5px #bbfaff;
   --link-color: #f2b1fd;
   --active-link-color: #ed85ff;
 }
+/* /Dark/Light mode color variables */
 
 body {
-  pointer-events: none;
+  pointer-events: none; /* Pointer events disabled so particles component works correctly */
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -98,8 +110,37 @@ body {
   position: fixed;
 }
 
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+p {
+  padding: 0.5rem;
+}
+
+.small {
+  font-size: 0.7rem;
+}
+
+/* Menu and links */
 #nav {
   padding: 30px;
+}
+
+#mode {
+  position: relative;
+  right: 2rem;
 }
 
 #nav a {
@@ -109,6 +150,7 @@ body {
 #nav a.router-link-exact-active {
   font-weight: bold;
   color: var(--active-link-color);
+  font-size: 1.2rem;
 }
 
 a,
@@ -117,13 +159,25 @@ button {
   pointer-events: auto;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 a:visited {
   color: var(--active-link-color);
 }
 
-/* BARRA SCROLL */
+button:focus {
+  outline: none;
+}
+
+button:hover,
+#nav a:hover,
+.big {
+  font-size: 1.2rem;
+}
+/* /Menu */
+
+/* SCROLL */
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -142,5 +196,12 @@ a:visited {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ed85ff;
+}
+/* /SCROLL */
+
+@media (min-width: 700px) {
+  html {
+    font-size: 16px;
+  }
 }
 </style>
