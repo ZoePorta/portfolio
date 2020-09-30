@@ -1,6 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import vueHeadful from "vue-headful";
+import VueTyperPlugin from "vue-typer";
+
+Vue.component("vue-headful", vueHeadful);
+Vue.use(VueTyperPlugin);
 
 /* Font awesome icons */
 import { library } from "@fortawesome/fontawesome-svg-core";

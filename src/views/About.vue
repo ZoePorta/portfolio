@@ -1,9 +1,20 @@
 <template>
   <div class="about">
+    <vue-headful
+      title="Sobre mí"
+      description="Un poco de información sobre quién es Zoe Porta."
+    />
     <img src="../assets/images/foto_Zoe.jpg" alt="Foto de Zoe Porta" />
 
     <div class="text">
-      <h1>Zoe Porta</h1>
+      <vue-typer
+        :repeat="0"
+        :pre-type-delay="120"
+        :type-delay="120"
+        caret-animation="solid"
+        text="Zoe Porta"
+      ></vue-typer>
+
       <h2>Programadora</h2>
       <p>
         ¡Hola! Me llamo Zoe y hago páginas y aplicaciones web.

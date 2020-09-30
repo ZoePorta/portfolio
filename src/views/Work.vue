@@ -1,10 +1,20 @@
 <template>
   <div class="works">
-    <h1>Algunas de las cosillas que he hecho...</h1>
-    <p>Haz click en las imágenes para más información</p>
+    <vue-headful
+      title="Proyectos"
+      description="Descripción y enlaces a algunos de mis proyectos."
+    />
+    <vue-typer
+      :repeat="0"
+      :pre-type-delay="120"
+      :type-delay="80"
+      caret-animation="solid"
+      text="Algunas cosillas..."
+    ></vue-typer>
     <article v-for="work in works" :key="work.id" class="work">
       <h1>{{ work.title }}</h1>
       <h2>{{ work.tech }}</h2>
+
       <flipper
         class="card"
         width="21rem"
@@ -18,7 +28,7 @@
         </div>
 
         <div class="cardside back" slot="back" v-html="work.desc">
-          {{ work.desc }}
+          <span>{{ work.desc }}</span>
         </div>
       </flipper>
       <nav>
@@ -47,9 +57,6 @@ export default {
     };
   },
   methods: {
-    onClick() {
-      this.flipped = !this.flipped;
-    },
     getImage(img) {
       return require("../assets/images/" + img);
     },
@@ -69,16 +76,17 @@ export default {
   box-shadow: var(--shadow);
   height: 100%;
   width: 100%;
-
   border-radius: 1rem;
-
   pointer-events: auto;
-
   padding: 1rem;
+  text-align: justify;
 }
 
 .back {
   background: var(--block-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cardside img {

@@ -1,9 +1,10 @@
 [
   {
+    "index": 0,
     "title": "Crafty (WIP)",
     "tech": "Node.js · Vue.js · MySQL",
     "image": "crafty_phone.jpg",
-    "desc": "<h3>Marketplace de productos artesanales</h3> <p>Registro y login.</p> <p>Los usuarios anónimos pueden buscar por palabras clave y/o distintos parámetros simultánamente.</p><p>Los usuarios registrados pueden agregar a su lista de deseos, comprar y valorar (puntuación y comentario) los productos.</p><p>Los usuarios vendedores pueden agregar productos al catálogo (no implementado en front).</p><br><ul style='list-style: inside; text-align: left;'><li><strong>Backend:</strong> Node.js (API Rest)</li><li><strong>Frontend:</strong> Vue.js</li><li><strong>Base de datos:</strong> MySQL</li></ul>",
+    "desc": "<p>Marketplace de productos artesalanes en el que cualquiera puede comprar o vender sin necesidad de cambiar de cuenta.</p><p>Puedes buscar simultaneamente por palabras, cateogrías, color, precio...</p><p>Los clientes pueden valorar lo que compran, y sus puntuaciones y comentarios aparecerán en la página del producto.</p><p>Por supuesto, cada artista tiene su propia página, con su presentación, su catálogo, y enlaces a sus RRSS.</p><p class='small'>(Pendiente implementar interfaz de vendedor.)</p>",
     "github": "https://github.com/ZoePorta/Proyecto",
     "flipped": false
   },
@@ -11,7 +12,7 @@
     "title": "Hack A Music",
     "tech": "Vue.js · API",
     "image": "music.jpg",
-    "desc": "<h3>Ranking musical</h3><p>Ranking de géneros, artistas y temas musicales.</p><p>Utiliza la <a href='https://www.last.fm/api' target='_blank' rel='noopener noreferrer'>API de Last.fm</a> para obtener los datos.</p><p>Al pasar el ratón, por encima muestra los oyentes.</p><p>Al hacer click, muestra una descripción y el enlace a la página correspondiente en Last.fm.</p><p><strong>Nota:</strong> Las imágenes están correctamente configuradas, es Last.fm quien las sustituyó por el icono de la estrella.</p>",
+    "desc": "<p>¿Quieres saber cuáles son los géneros más escuchados del momento en España? ¿Y los artistas? ¿Los temas? ¡Entra aquí!</p><p>Pasa el ratón por encima para ver los oyentes de cada uno, o haz click para más información.</p><p>Todos los datos vienen de la <a href='https://www.last.fm/api' target='_blank' rel='noopener noreferrer'>API de Last.fm</a>.</p><p class='small'>(Las imágenes están correctamente configuradas. Last.fm las ha retirado y ahora su API solo manda el icono de la estrella.)</p>",
     "github": "https://github.com/ZoePorta/hackamusic",
     "link": "https://zoe-hackamusic.netlify.app",
     "flipped": false
@@ -20,8 +21,7 @@
     "title": "Rick y Morty",
     "image": "rickmorty.jpg",
     "tech": "Vue.js · API",
-
-    "desc": "<h3>Buscador de personajes</h3><p>Coge los datos de la <a href='https://rickandmortyapi.com/' target='_blank' rel='noopener noreferrer'>API de Rick y Morty</a>.</p><p>Permite buscar por ID o fitrar por varios parámetros.</p>",
+    "desc": "<p>Si eres fan de la popular serie Rick y Morty, aquí tienes un buscador de personajes basado en su <a href='https://rickandmortyapi.com/' target='_blank' rel='noopener noreferrer'>API</a>.</p><p>Busca por ID o fitra simultaneamente según su nombre, género, especie, o si está vivo, muerto, o no se sabe.</p><br><p class='small'>¡WUBBA LUBBA DUB-DUB!</p>",
     "github": "https://github.com/ZoePorta/rick-morty-api",
     "link": "https://searchchar-rickandmorty.netlify.app",
     "flipped": false

@@ -1,6 +1,14 @@
 <template>
   <div class="contact">
-    <h1>¿Quieres contactar conmigo?</h1>
+    <vue-headful title="Contacto" description="Página de contacto." />
+    <vue-typer
+      :repeat="0"
+      :pre-type-delay="120"
+      :type-delay="70"
+      caret-animation="solid"
+      text="¿Quieres contactar conmigo?"
+    ></vue-typer>
+    <h1></h1>
     <ul>
       <li>
         Email (recomendado):

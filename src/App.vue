@@ -4,15 +4,10 @@
     <vue-particles
       :color="particles"
       :particleOpacity="1"
-      :particlesNumber="80"
       shapeType="star"
-      :particleSize="4"
       :linesColor="particles"
-      :linesWidth="1"
-      :lineLinked="true"
       :lineOpacity="0.85"
-      :linesDistance="150"
-      :moveSpeed="3"
+      :linesDistance="100"
       :hoverEffect="true"
       hoverMode="grab"
       :clickEffect="true"
@@ -116,9 +111,21 @@ body {
 }
 
 h1,
-h2 {
+h2,
+.vue-typer {
   font-family: "Permanent Marker", cursive;
   font-weight: 100;
+  margin: 0.5rem;
+  display: block;
+}
+
+.vue-typer .custom.char {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.vue-typer .custom.caret {
+  background-color: var(--link-color);
 }
 
 h2 {
