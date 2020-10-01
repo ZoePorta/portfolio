@@ -9,11 +9,15 @@ Vue.use(VueTyperPlugin);
 
 /* Font awesome icons */
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEye,
+  faEyeSlash,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faEye, faEyeSlash, faGithub);
+library.add(faEye, faEyeSlash, faEnvelope, faGithub, faLinkedin);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 /* /Font awesome icons */

@@ -28,6 +28,14 @@
         Lo friki me viene por herencia familiar. Tengo varios hobbies y una
         receta propia de cupcakes para chuparse los dedos 😋
       </p>
+      <p>
+        ¿Quieres información sobre mi formación y vida laboral? Visita mi
+        currículum haciendo click
+        <a
+          href="https://www.canva.com/design/DAECiUZECz0/gXVtIb5gP9C3WsmRjnDrKg/view?utm_content=DAECiUZECz0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          >aquí</a
+        >.
+      </p>
     </div>
   </div>
 </template>

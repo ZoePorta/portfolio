@@ -11,7 +11,12 @@
       caret-animation="solid"
       text="Algunas cosillas..."
     ></vue-typer>
-    <article v-for="work in works" :key="work.id" class="work">
+    <article
+      :style="pposition"
+      v-for="work in works"
+      :key="work.id"
+      class="work"
+    >
       <h1>{{ work.title }}</h1>
       <h2>{{ work.tech }}</h2>
 
@@ -41,6 +46,22 @@
         <span v-else><font-awesome-icon icon="eye-slash"/></span>
       </nav>
     </article>
+    <p>
+      <vue-typer
+        class="port"
+        :repeat="0"
+        :pre-type-delay="2000"
+        :type-delay="80"
+        caret-animation="solid"
+        text="Y, por supuesto, este mismo portfolio..."
+      ></vue-typer>
+      <a
+        class="port"
+        href="https://github.com/ZoePorta/portfolio"
+        title="Ver repositorio en GitHub"
+        ><font-awesome-icon :icon="['fab', 'github']"
+      /></a>
+    </p>
   </div>
 </template>
 
@@ -54,12 +75,33 @@ export default {
   data() {
     return {
       works: worksjson,
+
+      /* parallax parameters */
+      pposition: {
+        right: 0,
+        bottom: 0,
+      },
+      pdist: 0.5,
     };
   },
   methods: {
     getImage(img) {
       return require("../assets/images/" + img);
     },
+    parallax(event) {
+      let w = window.innerWidth;
+      let h = window.innerHeight;
+      let mouseX = event.clientX;
+      let mouseY = event.clientY;
+
+      this.pposition = {
+        right: this.pdist * 2 * (mouseX / w) - this.pdist + "rem",
+        bottom: this.pdist * 2 * (mouseY / h) - this.pdist + "rem",
+      };
+    },
+  },
+  mounted() {
+    window.addEventListener("mousemove", this.parallax);
   },
 };
 </script>
@@ -70,6 +112,10 @@ export default {
   width: fit-content;
   display: inline-block;
   margin: 1rem;
+  position: relative;
+}
+
+.card {
 }
 
 .cardside {
@@ -96,6 +142,10 @@ export default {
   width: 100%;
 
   border-radius: 1rem;
+}
+
+.port {
+  display: inline-block;
 }
 
 nav {
