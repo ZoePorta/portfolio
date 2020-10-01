@@ -4,7 +4,7 @@
     <vue-typer
       :repeat="0"
       :pre-type-delay="120"
-      :type-delay="70"
+      :type-delay="60"
       caret-animation="solid"
       text="¿Quieres contactar conmigo?"
     ></vue-typer>
@@ -53,7 +53,7 @@ ul {
   opacity: 0;
   animation-name: fadein;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -67,7 +67,7 @@ li {
   font-size: 5rem;
 }
 
-ul a {
+a {
   color: var(--text-color);
   text-decoration: none;
 }
