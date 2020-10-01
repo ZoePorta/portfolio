@@ -107,7 +107,7 @@ body {
 
 .container {
   padding: 0 2rem;
-  margin: 0 auto;
+  margin: auto;
 }
 
 h1,
@@ -167,6 +167,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 a:visited {
