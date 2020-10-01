@@ -18,13 +18,21 @@
     </figure>
     <ul>
       <li>
-        <a href="mailto:zoeportagarcia@gmail.com">
+        <a
+          href="mailto:zoeportagarcia@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <font-awesome-icon class="icon" icon="envelope" />
           <h2>zoeportagarcia@gmail.com</h2>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/zoeporta/">
+        <a
+          href="https://www.linkedin.com/in/zoeporta/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" />
           <h2>Zoe Porta</h2>
         </a>

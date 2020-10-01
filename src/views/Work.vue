@@ -37,10 +37,19 @@
         </div>
       </flipper>
       <nav>
-        <a :href="work.github" title="Ver repositorio en GitHub"
+        <a
+          :href="work.github"
+          title="Ver repositorio en GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
           ><font-awesome-icon :icon="['fab', 'github']"
         /></a>
-        <a :href="work.link" v-if="work.link" title="Visitar proyecto"
+        <a
+          :href="work.link"
+          v-if="work.link"
+          title="Visitar proyecto"
+          target="_blank"
+          rel="noopener noreferrer"
           ><font-awesome-icon icon="eye"
         /></a>
         <span v-else><font-awesome-icon icon="eye-slash"/></span>
@@ -58,6 +67,8 @@
       <a
         class="port"
         href="https://github.com/ZoePorta/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
         title="Ver repositorio en GitHub"
         ><font-awesome-icon :icon="['fab', 'github']"
       /></a>

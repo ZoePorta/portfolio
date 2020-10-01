@@ -20,8 +20,8 @@
         ¡Hola! Me llamo Zoe y hago páginas y aplicaciones web.
       </p>
       <p>
-        Hay muchas cosas que aún no sé, pero me encanta aprender, ¡y se me da
-        muy bien!
+        Aún me quedan cosas por saber, pero me encanta aprender, ¡y se me da muy
+        bien!
       </p>
 
       <p>
@@ -33,6 +33,8 @@
         currículum haciendo click
         <a
           href="https://www.canva.com/design/DAECiUZECz0/gXVtIb5gP9C3WsmRjnDrKg/view?utm_content=DAECiUZECz0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          target="_blank"
+          rel="noopener noreferrer"
           >aquí</a
         >.
       </p>
