@@ -6,7 +6,7 @@
       :pre-type-delay="120"
       :type-delay="60"
       caret-animation="solid"
-      text="¿Quieres contactar conmigo?"
+      :text="typertext"
     ></vue-typer>
     <figure>
       <img src="../assets/images/inbox.svg" alt="Inbox illustration" />
@@ -44,7 +44,24 @@
 <script>
 export default {
   name: "Contact",
-  components: {},
+  data() {
+    return {
+      typertext: " ",
+    };
+  },
+  methods: {
+    setText() {
+      if (window.innerWidth < 420) {
+        this.typertext = "¿Quieres contactar\nconmigo?";
+      } else {
+        this.typertext = "¿Quieres contactar conmigo?";
+      }
+    },
+  },
+  mounted() {
+    this.setText();
+    window.addEventListener("resize", this.setText);
+  },
 };
 </script>
 

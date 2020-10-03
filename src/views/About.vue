@@ -51,10 +51,12 @@ export default {
 
 <style scoped>
 .about {
-  margin: 0 auto;
+  margin: 1rem auto;
 
   display: flex;
   flex-direction: column;
+
+  min-height: 65vh;
 }
 
 img {

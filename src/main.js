@@ -3,7 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import vueHeadful from "vue-headful";
 import VueTyperPlugin from "vue-typer";
+import device from "vue-device-detector";
+import Vue2TouchEvents from "vue2-touch-events";
 
+Vue.use(Vue2TouchEvents, { disableClick: true });
+
+Vue.use(device);
 Vue.component("vue-headful", vueHeadful);
 Vue.use(VueTyperPlugin);
 

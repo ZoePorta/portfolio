@@ -62,7 +62,7 @@
         :pre-type-delay="2000"
         :type-delay="80"
         caret-animation="solid"
-        text="Y, por supuesto, este mismo portfolio..."
+        :text="typertext"
       ></vue-typer>
       <a
         class="port"
@@ -86,6 +86,8 @@ export default {
   data() {
     return {
       works: worksjson,
+      mobile: this.$device.mobile || this.$device.ipad || this.$device.ipod,
+      typertext: " ",
 
       /* parallax parameters */
       pposition: {
@@ -96,22 +98,35 @@ export default {
     };
   },
   methods: {
+    setText() {
+      if (window.innerWidth < 540) {
+        this.typertext = "Y, por supuesto, este\nmismo portfolio...";
+      } else {
+        this.typertext = "Y, por supuesto, este mismo portfolio...";
+      }
+    },
+
     getImage(img) {
       return require("../assets/images/" + img);
     },
+
     parallax(event) {
       let w = window.innerWidth;
       let h = window.innerHeight;
       let mouseX = event.clientX;
       let mouseY = event.clientY;
 
-      this.pposition = {
-        right: this.pdist * 2 * (mouseX / w) - this.pdist + "rem",
-        bottom: this.pdist * 2 * (mouseY / h) - this.pdist + "rem",
-      };
+      if (!this.mobile) {
+        this.pposition = {
+          right: this.pdist * 2 * (mouseX / w) - this.pdist + "rem",
+          bottom: this.pdist * 2 * (mouseY / h) - this.pdist + "rem",
+        };
+      }
     },
   },
   mounted() {
+    this.setText();
+    window.addEventListener("resize", this.setText);
     window.addEventListener("mousemove", this.parallax);
   },
 };
@@ -124,9 +139,6 @@ export default {
   display: inline-block;
   margin: 1rem;
   position: relative;
-}
-
-.card {
 }
 
 .cardside {
