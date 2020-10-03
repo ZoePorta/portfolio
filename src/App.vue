@@ -107,6 +107,7 @@ body {
 
 .container {
   padding: 0 2rem;
+  padding-bottom: 2rem;
   margin: auto;
 }
 
