@@ -35,5 +35,34 @@
     "github": "https://github.com/ZoePorta/vuester-code",
     "link": "https://zoe-vuesterslayer.netlify.app",
     "flipped": false
+  },
+  {
+    "title": "Conversor",
+    "tech": "JavaScript · API · HTML · CSS",
+
+    "image": "conversor.jpg",
+    "desc": "<p>¿Necesitas saber cúantos pesos colombianos son 15 euros? ¿Cuántos dólares canadienses son 167293 yenes?</p><p>No importa qué conversión quieras hacer, introduce la cantidad y las divisas correspondientes y ¡en un click lo sabrás!</p>",
+    "github": "https://github.com/ZoePorta/entregas-hab/tree/master/JS/entrega-5/conversorDivisas",
+    "link": "http://conversor-divisas.surge.sh/",
+    "flipped": false
+  },
+  {
+    "title": "Notas",
+    "tech": "JavaScript · HTML · CSS · Local Storage",
+
+    "image": "notas.jpg",
+    "desc": "<p>Si eres de esas personas a las que se les olvida todo y necesitas apuntar las cosas en algun sitio... ¡Aquí tienes dónde hacerlo!</p><p>Y, por si también se te olvida lo que ya has hecho, puedes tachar las tareas completadas.</p><p>No te preocupes por perder tus notas al cerrar. Se guardan en el dispositivo, así que estarán esperándote cuando la vuelvas a abrir.</p>",
+    "link": "http://zoe-todo.surge.sh/",
+    "flipped": false
+  },
+
+  {
+    "title": "Mi primera web",
+    "tech": "HTML · CSS",
+
+    "image": "exo.jpg",
+    "desc": "<p>Creé esta web en 2014 como proyecto de la asignatura Informática para la Creación de Web y Vídeo (Comunicación Audiovisual).</p><p>Si la hubiese hecho hoy, con lo que he aprendido, sería muy diferente (al menos el código); pero no me avergüenzo de ella, porque por algún lado se empieza.</p><p>Además, gracias al 10 con la que me la calificaron y mi buen resultado en el examen, conseguí matrícula de honor en dicha materia.</p>",
+    "link": "http://zoe-porta-web-exo.surge.sh/index.html",
+    "flipped": false
   }
 ]

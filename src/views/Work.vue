@@ -39,6 +39,7 @@
       <nav>
         <a
           :href="work.github"
+          v-if="work.github"
           title="Ver repositorio en GitHub"
           target="_blank"
           rel="noopener noreferrer"
@@ -52,7 +53,6 @@
           rel="noopener noreferrer"
           ><font-awesome-icon icon="eye"
         /></a>
-        <span v-else><font-awesome-icon icon="eye-slash"/></span>
       </nav>
     </article>
     <p>
