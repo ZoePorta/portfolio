@@ -27,6 +27,7 @@
         :flipped="work.flipped"
         @mouseover="work.flipped = true"
         @mouseleave="work.flipped = false"
+        @click="onClick(work.link)"
       >
         <div class="cardside front" slot="front">
           <img :src="getImage(work.image)" :alt="work.title" />
@@ -110,13 +111,19 @@ export default {
       return require("../assets/images/" + img);
     },
 
-    parallax(event) {
-      let w = window.innerWidth;
-      let h = window.innerHeight;
-      let mouseX = event.clientX;
-      let mouseY = event.clientY;
+    onClick(url) {
+      if (!this.mobile && url) {
+        const win = window.open(url, "_blank");
+        win.focus();
+      }
+    },
 
+    parallax(event) {
       if (!this.mobile) {
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
         this.pposition = {
           right: this.pdist * 2 * (mouseX / w) - this.pdist + "rem",
           bottom: this.pdist * 2 * (mouseY / h) - this.pdist + "rem",
