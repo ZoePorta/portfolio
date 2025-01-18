@@ -16,6 +16,9 @@
       v-for="work in works"
       :key="work.id"
       class="work"
+      @mouseover="work.flipped = true"
+      @mouseleave="work.flipped = false"
+      @click="onClick(work.link)"
     >
       <h1>{{ work.title }}</h1>
       <h2>{{ work.tech }}</h2>
