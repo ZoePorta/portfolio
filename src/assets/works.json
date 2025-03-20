@@ -9,15 +9,6 @@
     "flipped": false
   },
   {
-    "title": "Hack A Music",
-    "tech": "Vue.js · API",
-    "image": "music.jpg",
-    "desc": "<p>¿Quieres saber cuáles son los géneros más escuchados del momento en España? ¿Y los artistas? ¿Los temas? ¡Entra aquí!</p><p>Pasa el ratón por encima para ver los oyentes de cada uno, o haz click para más información.</p><p>Todos los datos vienen de la <a href='https://www.last.fm/api' target='_blank' rel='noopener noreferrer'>API de Last.fm</a>.</p><p class='small'>(Las imágenes están correctamente configuradas. Last.fm las ha retirado y ahora su API solo manda el icono de la estrella.)</p>",
-    "github": "https://github.com/ZoePorta/hackamusic",
-    "link": "https://zoe-hackamusic.netlify.app",
-    "flipped": false
-  },
-  {
     "title": "Rick y Morty",
     "image": "rickmorty.jpg",
     "tech": "Vue.js · API",
@@ -37,6 +28,15 @@
     "flipped": false
   },
   {
+    "title": "Hack A Music",
+    "tech": "Vue.js · API",
+    "image": "music.jpg",
+    "desc": "<p>¿Quieres saber cuáles son los géneros más escuchados del momento en España? ¿Y los artistas? ¿Los temas? ¡Entra aquí!</p><p>Pasa el ratón por encima para ver los oyentes de cada uno, o haz click para más información.</p><p>Todos los datos vienen de la <a href='https://www.last.fm/api' target='_blank' rel='noopener noreferrer'>API de Last.fm</a>.</p><p class='small'>(Las imágenes están correctamente configuradas. Last.fm las ha retirado y ahora su API solo manda el icono de la estrella.)</p>",
+    "github": "https://github.com/ZoePorta/hackamusic",
+    "link": "https://zoe-hackamusic.netlify.app",
+    "flipped": false
+  },
+  {
     "title": "Conversor",
     "tech": "JavaScript · API · HTML · CSS",
 
@@ -47,12 +47,12 @@
     "flipped": false
   },
   {
-    "title": "Notas",
+    "title": "Tareas",
     "tech": "JavaScript · HTML · CSS · Local Storage",
 
-    "image": "notas.jpg",
+    "image": "tasks.png",
     "desc": "<p>Si eres de esas personas a las que se les olvida todo y necesitas apuntar las cosas en algun sitio... ¡Aquí tienes dónde hacerlo!</p><p>Y, por si también se te olvida lo que ya has hecho, puedes tachar las tareas completadas.</p><p>No te preocupes por perder tus notas al cerrar. Se guardan en el dispositivo, así que estarán esperándote cuando la vuelvas a abrir.</p>",
-    "link": "http://zoe-todo.surge.sh/",
+    "link": "https://tasks-zoeporta.vercel.app/",
     "flipped": false
   },
 

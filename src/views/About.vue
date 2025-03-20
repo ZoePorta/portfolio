@@ -16,12 +16,30 @@
       ></vue-typer>
 
       <h2>Programadora</h2>
+      <address>
+        <a
+          href="https://www.linkedin.com/in/zoeporta/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" />
+        </a>
+        <a
+          href="https://github.com/ZoePorta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <font-awesome-icon class="icon" :icon="['fab', 'github']" />
+        </a>
+      </address>
       <p>
-        ¡Hola! Me llamo Zoe y hago páginas y aplicaciones web.
+        ¡Hola! Me llamo Zoe y llevo cuatro años formando a futuros
+        programadores.
       </p>
       <p>
-        Aún me quedan cosas por saber, pero me encanta aprender, ¡y se me da muy
-        bien!
+        Después de esta experiencia, puedo afirmar con seguridad que enseñar es
+        una de las mejores formas de aprender. Siempre quedará camino por
+        recorrer pero por suerte es algo que me encanta ¡y se me da genial!
       </p>
 
       <p>
@@ -71,6 +89,11 @@ img {
   height: 100%;
   margin: auto;
   padding: 3rem;
+}
+address {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 @media (orientation: landscape) {
