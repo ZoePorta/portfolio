@@ -47,13 +47,13 @@
         receta propia de cupcakes para chuparse los dedos 😋
       </p>
       <p>
-        ¿Quieres información sobre mi formación y vida laboral? Visita mi
-        currículum haciendo click
+        ¿Quieres información sobre mi formación y vida laboral? 
         <a
-          href="https://www.canva.com/design/DAECiUZECz0/gXVtIb5gP9C3WsmRjnDrKg/view?utm_content=DAECiUZECz0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+          href="https://www.canva.com/design/DAGkDxuNX_s/5SHiQyOSEcANAxwsAetnBg/view?utm_content=DAGkDxuNX_s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc67f3b660f"
           target="_blank"
           rel="noopener noreferrer"
-          >aquí</a
+          >Visita mi
+        currículum</a
         >.
       </p>
     </div>
